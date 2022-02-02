@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Container } from './Container';
 
 export const PageContent: React.FC = ({ children }) => {

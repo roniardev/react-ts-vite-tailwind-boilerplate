@@ -1,6 +1,6 @@
+import { LayoutRoot } from 'components/layout';
 import { Home, NotFound } from 'pages';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { LayoutRoot } from 'components/layout';
 
 export default function Router() {
   return (
