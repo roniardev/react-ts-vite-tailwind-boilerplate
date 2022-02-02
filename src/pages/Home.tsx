@@ -6,7 +6,7 @@ export function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Hello Vite + React!</p>
+        <p className="font-bold text-xl">Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
