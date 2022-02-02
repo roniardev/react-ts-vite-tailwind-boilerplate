@@ -1,38 +1,15 @@
-import { useState } from 'react';
+import { Page, PageContent } from 'components/layout/page';
 
 export function Home() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className="font-bold text-xl">Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer">
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer">
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <Page>
+      <PageContent>
+        <div className="flex flex-col items-center px-3 py-8 space-y-2 lg:px-8">
+          <p className="font-bold text-3xl">
+            React + Typescript + Vite + Tailwind Boilerplate
+          </p>
+        </div>
+      </PageContent>
+    </Page>
   );
 }
