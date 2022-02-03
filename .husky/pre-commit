@@ -3,3 +3,5 @@
 
 yarn lint
 yarn test
+git add .
+git push -u origin HEAD
