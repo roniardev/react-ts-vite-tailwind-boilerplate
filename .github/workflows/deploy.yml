@@ -2,25 +2,27 @@ name: deploy website
 on:
   push:
     branches:
-      - "**"
+      - '**'
   pull_request:
     branches:
-      - "master"
+      - 'master'
 jobs:
-  test:
-	  name: "run test"
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [17.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Go
-        uses: actions/setup-go@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          go-version: 1.16
-      - name: running testing
-        run: yarn test
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+      - run: yarn test
 
   deploy:
-    name: "deploy to vercel"
+    name: 'deploy to vercel'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,5 +30,5 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
-          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
+          vercel-org-id: ${{ secrets.ORG_ID}} #Required
           vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
