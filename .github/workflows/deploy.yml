@@ -7,7 +7,7 @@ on:
     branches:
       - 'master'
 jobs:
-  build:
+  testing:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,6 +23,7 @@ jobs:
 
   deploy:
     name: 'deploy to vercel'
+    needs: testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
