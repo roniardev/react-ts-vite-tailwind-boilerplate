@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "paths": {
+      "src/*": ["src/*"],
+      "tests/*": ["__tests__/*"]
+    },
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "jest", "@testing-library/jest-dom"],
     "baseUrl": "src",
     "allowJs": false,
     "skipLibCheck": false,
