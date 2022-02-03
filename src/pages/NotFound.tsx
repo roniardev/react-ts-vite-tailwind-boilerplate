@@ -4,8 +4,8 @@ export function NotFound() {
   return (
     <Page>
       <PageContent>
-        <div className="flex flex-col items-center px-3 py-8 space-y-2 lg:px-8">
-          <p className="text-3xl font-bold font-primary">NotFound</p>
+        <div className="flex flex-col items-center space-y-2 px-3 py-8 lg:px-8">
+          <p className="font-primary text-3xl font-bold">NotFound</p>
         </div>
       </PageContent>
     </Page>
