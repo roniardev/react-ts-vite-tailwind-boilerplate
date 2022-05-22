@@ -31,6 +31,18 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended', // Make sure this is always the last element in the array.
   ],
+  globals: {
+    React: true,
+    google: true,
+    mount: true,
+    mountWithRouter: true,
+    shallow: true,
+    shallowWithRouter: true,
+    context: true,
+    expect: true,
+    jsdom: true,
+    JSX: true,
+  },
   plugins: ['simple-import-sort', 'prettier'],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
