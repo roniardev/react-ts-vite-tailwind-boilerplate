@@ -11,6 +11,7 @@
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
     "lint": "yarn lint:format && yarn lint:fix ",
     "new:component": "plop component",
+    "new:page": "plop page",
     "type-check": "tsc",
     "test": "jest",
     "prepare": "husky install"
