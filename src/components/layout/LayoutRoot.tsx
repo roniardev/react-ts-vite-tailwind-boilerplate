@@ -10,8 +10,7 @@ type Props = {
 export const LayoutRoot = ({ children }: Props) => (
   <main
     className="flex min-h-screen w-full flex-col bg-gray-100 dark:bg-dark"
-    data-theme="cupcake"
-  >
+    data-theme="cupcake">
     <Header />
     {children}
     <Footer />
