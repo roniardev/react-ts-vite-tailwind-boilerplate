@@ -3,6 +3,7 @@ import { readdirSync } from 'fs';
 import path from 'path';
 import { defineConfig } from 'vite';
 import ViteFonts from 'vite-plugin-fonts';
+import { VitePWA } from 'vite-plugin-pwa';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://stackoverflow.com/questions/69424422/use-compileroptions-baseurl-with-vite-js-project
@@ -28,6 +29,12 @@ export default defineConfig({
     ViteFonts({
       google: {
         families: ['Epilogue', 'Inter'],
+      },
+    }),
+    VitePWA({
+      devOptions: {
+        enabled: true,
+        /* other options */
       },
     }),
   ],
