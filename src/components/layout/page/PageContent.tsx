@@ -8,7 +8,7 @@ type PageContentAttribute = {
 
 const PageContent: React.FC<PageContentAttribute> = (props: PageContentAttribute) => {
   return (
-    <div className="flex flex-col flex-1 px-4 pb-12">
+    <div className="flex flex-1 flex-col px-4 pb-12">
       <Container>{props.children}</Container>
     </div>
   );

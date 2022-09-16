@@ -5,7 +5,7 @@ type PageChildren = {
 };
 
 const Page: React.FC<PageChildren> = (props: PageChildren) => {
-  return <section className="flex flex-col flex-1 py-16">{props.children}</section>;
+  return <section className="flex flex-1 flex-col py-16">{props.children}</section>;
 };
 
 export default Page;
