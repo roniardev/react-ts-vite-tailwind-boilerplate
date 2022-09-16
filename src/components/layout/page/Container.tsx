@@ -1,5 +1,9 @@
 import React from 'react';
 
-export const Container = <T extends {}>(props: React.PropsWithChildren<T>) => {
-  return <div className="mx-auto w-full sm:max-w-3xl">{props.children}</div>;
+type ContainerProps = {
+  children: React.ReactNode;
+};
+
+export const Container = (props: ContainerProps) => {
+  return <div className="w-full mx-auto sm:max-w-3xl">{props.children}</div>;
 };

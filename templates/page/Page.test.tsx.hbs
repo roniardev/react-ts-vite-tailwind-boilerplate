@@ -1,8 +1,0 @@
-import { render, screen } from '@testing-library/react';
-import { {{name}} } from 'pages';
-
-test('Renders {{name}} page correctly', async () => {
-  render(<{{name}} />);
-  const notFoundAlert = await screen.queryByText(/{{name}} Page/);
-  expect(notFoundAlert).toBeInTheDocument();
-});
